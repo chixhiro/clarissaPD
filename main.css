@@ -1,0 +1,172 @@
+body{
+	font-size:22px;
+      background:pink;
+
+}
+
+
+
+#items,#options{
+	display:grid;
+}
+
+a{
+	text-decoration: none;
+	color:white;
+}
+
+	
+#items{  /* Where ur bio and pic will be at */
+	margin:auto;
+	height:400px;
+	width:90%;
+	grid-template-rows: 90%;
+	grid-template-columns:35% 35%;
+	grid-template-areas:'bio  drawing';
+		justify-content: center;
+
+}
+
+	
+#bio,#drawing{ /* #bio is ur bio while the #drawing is where the drawing will be at */
+	width:100%;
+	height:100%;
+	text-align:center;
+
+
+}
+
+#bio{
+	width:100%;
+	height:60%;
+	word-break: break-all;
+	display: inline-block;
+	grid-area:bio;
+	align-self:center;
+	color:#E22167;
+	background: rgb(255,255,255,0.5);
+
+}
+
+#drawing{
+	background-image:url("clar.png");
+	grid-area:drawing;
+}
+	
+	
+#options{ /* where the buttons will be at*/
+	background:white;
+		margin-top:20px;
+		margin:auto;
+	height:400px;
+	width:80%;
+	grid-template-rows: 50% 50%;
+	grid-template-columns:50% 50%;
+	grid-template-areas:'illustration  photoshop'
+	                    'video  others'
+	;
+		justify-content: center;
+}
+
+
+#illustration{ 
+	background:pink;
+	grid-area:illustration;
+}
+
+#photoshop{
+		background:pink;
+	grid-area:photoshop;
+}
+
+#video{
+		background:pink;
+	grid-area:video;
+}
+
+#others{
+		background:pink;
+	grid-area:others;
+}
+
+#illustration,#photoshop,#video,#others{
+	border-radius:10%;
+	transition: background 0.5s; /* transition for each button */
+	height:80%;
+	width:80%;
+	justify-self: center;
+	align-self: center;
+	text-align:center;
+	justify-content: center;
+	border: none;
+	font-size:28px;
+}
+
+#illustration:hover,#photoshop:hover,#video:hover,#others:hover{ /* transition from blue to red when its hovered */
+	background:#FF025E;
+	transition:3
+}
+
+@media(max-width:600px) /* for smaller mobile devices */
+
+
+{
+
+/*body{ background:linear-gradient(hotpink,deeppink,violet);}*/
+	#options{
+	background:green;
+		margin-top:20px;
+		margin:auto;
+	height:400px;
+	width:80%;
+	grid-template-rows: 25% 25% 25% 25%;
+	grid-template-columns:80%;
+	grid-template-areas:'illustration'  
+	'photoshop'
+	                    'video'  
+						'others'
+	;
+		justify-content: center;
+}
+
+#items{
+	margin:auto;
+	height:400px;
+	width:90%;
+	grid-template-rows: 100%;
+	grid-template-columns:50% 50%;
+
+		justify-content: center;
+
+}
+
+#bio,#drawing{
+	width:100%;
+	height:100%;
+	background:red;
+	text-align:center;
+		justify-self: center;
+	align-self: center;
+
+}
+
+#bio{
+	width:100%;
+	height:60%;
+	word-break: break-all;
+	display: inline-block;
+	grid-area:bio;
+	align-self:center;
+
+}
+
+#drawing{
+		width:150px;
+	height:150px;
+	background:blue;
+	grid-area:drawing;
+}
+}
+.button{
+	margin:auto;
+}
